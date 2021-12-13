@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="cssdash/styles.css" />
+    <title>PANEL DE CONTROL</title>
+</head>
+
+<body>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div class="bg-white" id="sidebar-wrapper">
+            <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom"><i
+                    class="fas fa-user me-2"></i>Soporte UST</div>
+            <div class="list-group list-group-flush my-3">
+                <a href="salas.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                        class="fas fa-school me-2"></i>Salas de clases</a>
+                <a href="proyectores.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                        class="fas fa-tv me-2"></i>Proyectores</a>
+                <a href="computadores.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                        class="fas fa-laptop me-2"></i>Computadores</a>
+                <a href="impresoras.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                        class="fas fa-print me-2"></i>Impresoras</a>
+                <a href="inventarios.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                        class="fas fa-table me-2"></i>Inventarios</a>
+                <a href="usuarios.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                        class="fas fa-users me-2"></i>Usuarios</a>
+                <a href="#" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold"><i
+                        class="fas fa-power-off me-2"></i>Logout</a>
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- navegador superior -->
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle"></i>
+                    <h2 class="fs-2 m-0">Dashboard</h2>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle second-text fw-bold" href="#" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-user me-2"></i>@Usuario
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Salir</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- div de pantalla principal -->
+            <div class="container-fluid px-4">
+                <div class="row g-3 my-2">
+                    <div class="col-md-3">
+                        <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
+                            <div>
+                                <h3 class="fs-2">000</h3>
+                                <p class="fs-5">Salones</p>
+                            </div>
+                            <i class="fas fa-school fs-1 primary-text border rounded-full secondary-bg p-3"></i>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
+                            <div>
+                                <h3 class="fs-2">000</h3>
+                                <p class="fs-5">Computadores</p>
+                            </div>
+                            <i
+                                class="fas fa-laptop fs-1 primary-text border rounded-full secondary-bg p-3"></i>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
+                            <div>
+                                <h3 class="fs-2">000</h3>
+                                <p class="fs-5">Proyectores</p>
+                            </div>
+                            <i class="fas fa-tv fs-1 primary-text border rounded-full secondary-bg p-3"></i>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
+                            <div>
+                                <h3 class="fs-2">000</h3>
+                                <p class="fs-5">Impresoras</p>
+                            </div>
+                            <i class="fas fa-print fs-1 primary-text border rounded-full secondary-bg p-3"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container-fluid">
+                    <h2 class="text-center">Información de computadores UST</h2>
+                   
+                    <div class="row">
+                      <div class="container">
+                        <div class="btnAdd">
+                         <a href="#!" data-id="" data-bs-toggle="modal" data-bs-target="#addUserModal"   class="btn btn-success btn-sm" >Agregar Equipo</a>
+                       </div>
+                       <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                         <table id="example" class="table">
+                          <thead>
+                            <th>serie</th>
+                            <th>tipo</th>
+                            <th>marca</th>
+                            <th>estado</th>
+                            <th>cargo</th>
+                            <th>dominio</th>
+                            <th>OS</th>
+                            <th>modelo</th>
+                            <th>ram</th>
+                            <th>procesador</th>
+                            <th>uso</th>
+                          </thead>
+                          <tbody>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="col-md-2"></div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+
+                <!-- Modal de update equipo-->
+              
+                <!-- Add user Modal -->
+                <div class="modal fade" id="addUserModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Agregar Equipo</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        <form id="addcomputador" action="">
+                            <div class="mb-3 row">
+                            <label for="addserie" class="col-md-3 form-label">serie</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" id="addserie" name="serie" >
+                            </div>
+                            </div>
+                            <div class="mb-3 row">
+                            <label for="addtipo" class="col-md-3 form-label">tipo</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" id="addtipo" name="tipo">
+                            </div>
+                            </div>
+                            <div class="mb-3 row">
+                            <label for="addmarca" class="col-md-3 form-label">marca</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" id="addmarca" name="marca">
+                            </div>
+                            </div>
+                            <div class="mb-3 row">
+                            <label for="addestadocompu" class="col-md-3 form-label">estado</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" id="addestado" name="estadocompu">
+                            </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label for="addcargo" class="col-md-3 form-label">cargo</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" id="addcargo" name="cargo">
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label for="adddominio" class="col-md-3 form-label">dominio</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" id="adddominio" name="dominio">
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label for="addos" class="col-md-3 form-label">OS</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" id="addos" name="os">
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label for="addmodelo" class="col-md-3 form-label">modelo</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" id="addmodelo" name="modelo">
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label for="addram" class="col-md-3 form-label">ram</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" id="addram" name="ram">
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label for="addprocesador" class="col-md-3 form-label">procesador</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" id="addprocesador" name="procesador">
+                                </div>
+                            </div>
+
+                            <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Guardar</button>
+                            </div>
+                        </form> 
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        var el = document.getElementById("wrapper");
+        var toggleButton = document.getElementById("menu-toggle");
+
+        toggleButton.onclick = function () {
+            el.classList.toggle("toggled");
+        };
+    </script>
+     <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/dt-1.10.25/af-2.3.7/date-1.1.0/r-2.2.9/rg-1.1.3/sc-2.0.4/sp-1.3.0/datatables.min.js"></script>
+    
+      
+    <!-- extension responsive -->
+    <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+          $('#example').DataTable({
+            "fnCreatedRow": function( nRow, aData, iDataIndex ) {
+              $(nRow).attr('id', aData[0]);
+            },
+            'serverSide':'true',
+            'processing':'true',
+            'paging':'true',
+            'order':[],
+            'ajax': {
+              'url':'fetch_data.php',
+              'type':'post',
+            },
+            "columnDefs": [{
+              'target':[10],
+              'orderable' :false,
+            }]
+          });
+        } );
+        $(document).on('submit','#addcomputador',function(e){
+          e.preventDefault();
+          var serie= $('#addserie').val();
+          var tipo= $('#addtipo').val();
+          var marca= $('#addmarca').val();
+          var estadocompu= $('#addestadocompu').val();
+          var cargo= $('#addcargo').val();
+          var dominio= $('#adddominio').val();
+          var os= $('#addos').val();
+          var modelo= $('#addmodelo').val();
+          var ram= $('#addram').val();
+          var procesador= $('#addprocesador').val();
+          var uso= $('#adduso').val();
+          
+          if(serie != '' && tipo != '' && marca != '' && estadocompu != '' && cargo != '' && dominio != '' && os != '' && modelo != '' && ram != '' && procesador != '' && uso != '')
+          {
+           $.ajax({
+             url:"add_user.php",
+             type:"post",
+             data:{serie:serie,tipo:tipo,marca:marca,estadocompu:estadocompu,cargo:cargo,dominio:dominio,os:os,modelo:modelo,ram:ram,procesador:procesador,uso:uso},
+             success:function(data)
+             {
+               var json = JSON.parse(data);
+               var status = json.status;
+               if(status=='true')
+               {
+                mytable =$('#example').DataTable();
+                mytable.draw();
+                $('#addUserModal').modal('hide');
+              }
+              else
+              {
+                alert('failed');
+              }
+            }
+          });
+         }
+         else {
+          alert('ingrese todos los campos');
+        }
+      });
+        $(document).on('submit','#updateUser',function(e){
+          e.preventDefault();
+           //var tr = $(this).closest('tr');
+           var serie= $('#addserie').val();
+          var tipo= $('#addtipo').val();
+          var marca= $('#addmarca').val();
+          var estadocompu= $('#addestadocompu').val();
+          var cargo= $('#addcargo').val();
+          var dominio= $('#adddominio').val();
+          var os= $('#addos').val();
+          var modelo= $('#addmodelo').val();
+          var ram= $('#addram').val();
+          var procesador= $('#addprocesador').val();
+          var uso= $('#adduso').val();
+           if(city != '' && username != '' && mobile != '' && email != '' )
+           {
+             $.ajax({
+               url:"update_user.php",
+               type:"post",
+               data:{serie:serie,tipo:tipo,marca:marca,estadocompu:estadocompu,cargo:cargo,dominio:dominio,os:os,modelo:modelo,ram:ram,procesador:procesador,uso:uso},
+               success:function(data)
+               {
+                 var json = JSON.parse(data);
+                 var status = json.status;
+                 if(status=='true')
+                 {
+                  table =$('#example').DataTable();
+                  // table.cell(parseInt(trid) - 1,0).data(id);
+                  // table.cell(parseInt(trid) - 1,1).data(username);
+                  // table.cell(parseInt(trid) - 1,2).data(email);
+                  // table.cell(parseInt(trid) - 1,3).data(mobile);
+                  // table.cell(parseInt(trid) - 1,4).data(city);
+                  var button =   '<td><a href="javascript:void();" data-id="' +id + '" class="btn btn-info btn-sm editbtn">Edit</a>  <a href="#!"  data-id="' +id + '"  class="btn btn-danger btn-sm deleteBtn">Delete</a></td>';
+                  var row = table.row("[id='"+trid+"']");
+                  row.row("[id='" + trid + "']").data([serie,tipo,marca,estadocompu,cargo,dominio,os,modelo,ram,procesador,uso]);
+                  $('#exampleModal').modal('hide');
+                }
+                else
+                {
+                  alert('failed');
+                }
+              }
+            });
+           }
+           else {
+            alert('Fill all the required fields');
+          }
+        });
+        $('#example').on('click','.editbtn ',function(event){
+          var table = $('#example').DataTable();
+          var trid = $(this).closest('tr').attr('id');
+         // console.log(selectedRow);
+         var id = $(this).data('id');
+         $('#exampleModal').modal('show');
+    
+         $.ajax({
+          url:"get_single_data.php",
+          data:{id:id},
+          type:'post',
+          success:function(data)
+          {
+           var json = JSON.parse(data);
+           $('#nameField').val(json.username);
+           $('#emailField').val(json.email);
+           $('#mobileField').val(json.mobile);
+           $('#cityField').val(json.city);
+           $('#id').val(id);
+           $('#trid').val(trid);
+         }
+       })
+       });
+    
+        $(document).on('click','.deleteBtn',function(event){
+           var table = $('#example').DataTable();
+          event.preventDefault();
+          var id = $(this).data('id');
+          if(confirm("Are you sure want to delete this User ? "))
+          {
+          $.ajax({
+            url:"delete_user.php",
+            data:{id:id},
+            type:"post",
+            success:function(data)
+            {
+              var json = JSON.parse(data);
+              status = json.status;
+              if(status=='success')
+              {
+                //table.fnDeleteRow( table.$('#' + id)[0] );
+                 //$("#example tbody").find(id).remove();
+                 //table.row($(this).closest("tr")) .remove();
+                 $("#"+id).closest('tr').remove();
+              }
+              else
+              {
+                alert('Failed');
+                return;
+              }
+            }
+          });
+          }
+          else
+          {
+            return null;
+          }
+    
+    
+    
+        })
+     </script>
+   
+</body>
+
+</html>
+<script type="text/javascript">
+    //var table = $('#example').DataTable();
+  </script>
